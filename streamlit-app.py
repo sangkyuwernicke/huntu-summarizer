@@ -24,7 +24,7 @@ if st.button("Submit",type="primary"):
             response=client.chat.completions.create(model="gpt-4o",
             messages=[
                 {"role":"system","content":"you are a helpful intelligent AI assistant"},
-                {"role":"user","content":f"summarize the following paragraph into bullet points in Korean:\n\n{xx}"}
+                {"role":"user","content":f"summarize the following paragraph into bullet points in Korean:\n\n{sentence}"}
             
             ])
             msg=response.choices[0].message.content
